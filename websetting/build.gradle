@@ -8,20 +8,6 @@ version = '1.0'
 
 android {
 
-    // This project has four build variants: fullDebug, fullRelease, demoDebug, demoRelease
-    flavorDimensions 'mode'
-    productFlavors {
-        full {}
-        demo {}
-    }
-
-    publishing {
-        // Publishes "fullRelease" build variant with "fullRelease" component created by
-        // Android Gradle plugin
-        singleVariant("fullRelease")
-    }
-
-
     compileSdk 32
 
     defaultConfig {
@@ -56,8 +42,8 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            fullRelease(MavenPublication) {
-                from components.fullRelease
+            release(MavenPublication){
+                from components.release
                 groupId = 'com.github.buratinoapps' //your git id
                 artifactId = 'WebViewSettings' //your-repository
                 version = '1.0' // As same as the Tag
