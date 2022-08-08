@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 
-import com.buratinoapps.websetting.WebSetting;
+import com.buratinoapps.websetting.Websetting;
 import com.buratinoapps.webviewsettings.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
